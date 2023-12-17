@@ -1,0 +1,116 @@
+body {
+    background-color: #E8EEF1; 
+}
+
+.logo {
+    width: 85px;
+    height: 85px;
+    margin-left: 85%;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #F0F1EF;
+    align-items: center;
+    display: flex;
+    border-bottom: rgb(45, 48, 51);
+    box-shadow: 0px 1px 1px 1px rgb(45, 48, 51);
+}
+  
+  .navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: rgb(45, 48, 51);
+    text-align: center;
+    padding: 0.12px 10px;
+    text-decoration: none;
+}
+.logomargin {
+    margin-left: 26%;
+}
+
+.signin {
+    margin-left: 39%;
+}
+
+.right-align {
+    margin-right: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.piepic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    margin: 15px auto;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    float: left;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.text-box {
+    color: #4e8f8a;
+}
+
+.text-box h2 {
+    font-size: 70px;
+}
+
+.text-box p {
+    font-size: 15px;
+}
+
+.blurrypic {
+    position: relative;
+    width: 100%;
+}
+
+.blurrypic img {
+    width: 100%;
+    height: auto;
+}
+
+.blurrypic .btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 450px;
+}
+  
+.blurrypic .btn:hover {
+    background-color: rgb(80, 99, 103);
+}
+
+@media screen and (max-width : 700px) {
+    .piepic{
+        display: flex;
+        flex-direction: column;
+    }
+    .blurrypic .btn{
+        transform: translate(-50%, -740%);
+    }
+}
+
+
+
+
+

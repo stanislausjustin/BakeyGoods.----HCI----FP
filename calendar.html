@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="calendar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <div class="wrapper site-header__wrapper">
+    <nav class="nav">
+      <div class="nav__toggle" aria-expanded="false" tabindex="0">
+        <i class="fa-regular fa-bars"></i>
+      </div>
+      <ul class="nav__wrapper">
+        <span class="nav__item"><a href="afterlogin.html">Home</a></span>
+        <span class="nav__item"><a href="calendar.html">Monthly Calendar</a></span>
+      </ul>
+    </nav>
+    <a href="index.html">
+      <button class="signin-button" aria-label="Sign in">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-log-out">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Log out</span>
+      </button>
+    </a>
+  </div>
+
+  <br><br><br><br><br><br>
+
+  <!--HEADER-->
+  <div class="center">
+    <h1>New Monthly Recipes: Christmas Edition</h1>
+  </div>
+  <!--SELECT CATEGORIES-->
+  <br><br><br><br><br><br><br>
+  <div class="category-dropdown">
+    <div class="category-header">
+      <span class="category-title">Category</span>
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </div>
+    <div class="category-options">
+      <ul>
+        <li class="filter-button" data-filter="all">All</li>
+        <li class="filter-button" data-filter="cakes">Cakes</li>
+        <li class="filter-button" data-filter="cookies">Cookies</li>
+        <li class="filter-button" data-filter="pancakes">Pancakes</li>
+        <li class="filter-button" data-filter="pies">Pies</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="allofem">
+    <!--TABLE-->
+    <br><br>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="10" class="month">December 2023</th>
+        </tr>
+        <tr id="days">
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="fill"></td>
+          <td class="fill"></td>
+          <td class="fill"></td>
+          <td class="fill"></td>
+          <td data-day="1" class="event" id="event">
+            <p alt="cake" data-category="cakes">A Partride
+              <br>in a Pear <br> cheesecake
+            </p>
+          </td>
+          <td data-day="2" class="event" id="event">
+            <p alt="cake" data-category="cakes">Two Turtle
+              <br>Cakes
+            </p>
+          </td>
+          <td data-day="3" class="event" id="event">
+            <p alt="cake" data-category="pancakes">Three French
+              <br>Pankies
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td data-day="4" class="event" id="event">
+            <p alt="cake" data-category="pancakes">Four Frosted
+              <br>Flakes
+            </p>
+          </td>
+          <td data-day="5" class="event" id="event">
+            <p alt="cake" data-category="pies">Five Elf
+              <br>Pies
+            </p>
+          </td>
+          <td data-day="6" class="event" id="event">
+            <p alt="cake" data-category="pies">Six Baklava
+              <br>Pies
+            </p>
+          </td>
+          <td data-day="7" class="event" id="event">
+            <p alt="cake" data-category="cakes">Seven Cakes
+              <br>a Swimming
+            </p>
+          </td>
+          <td data-day="8" class="event" id="event">
+            <p alt="cake" data-category="cookies">Eight chip
+              <br>a Cookie
+            </p>
+          </td>
+          <td data-day="9" class="event" id="event">
+            <p alt="cake" data-category="cookies">Nine Cookies
+              <br>Dancing
+            </p>
+          </td>
+          <td data-day="10" class="event" id="event">
+            <p alt="cake" data-category="pies">Ten Pies
+              <br>a Leaping
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td data-day="11" class="event" id="event">
+            <p alt="cake" data-category="pies">Eleven Cupcakes
+              <br>Piping
+            </p>
+          </td>
+          <td data-day="12" class="event" id="event">
+            <p alt="cake" data-category="cookies">Twelve Ginger
+              <br>Men Cookies
+            </p>
+          </td>
+          <td data-day="13" class="no_event"></td>
+          <td data-day="14" class="no_event"></td>
+          <td data-day="15" class="no_event"></td>
+          <td data-day="16" class="event" id="event">
+            <p alt="cake" data-category="pies">Blue Smurf
+              <br>Pie
+            </p>
+          </td>
+          <td data-day="17" class="no_event"></td>
+        </tr>
+        <tr>
+          <td data-day="18" class="no_event"></td>
+          <td data-day="19" class="no_event"></td>
+          <td data-day="20" class="no_event"></td>
+          <td data-day="21" class="event" id="event">
+            <p alt="cake" data-category="cakes">Santa Bathing
+              <br>Cake
+            </p>
+          </td>
+          <td data-day="22" class="no_event"></td>
+          <td data-day="23" class="no_event"></td>
+          <td data-day="24" class="no_event"></td>
+        </tr>
+        <tr>
+          <td data-day="25" class="no_event"></td>
+          <td data-day="26" class="event" id="event">
+            <p alt="cake" data-category="cakes">Little Mermaid
+              <br>cake
+            </p>
+          </td>
+          <td data-day="27" class="no_event"></td>
+          <td data-day="28" class="no_event"></td>
+          <td data-day="29" class="no_event"></td>
+          <td data-day="30" class="no_event"></td>
+          <td data-day="31" class="no_event"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FOOTER -->
+    <div id="footerwrap">
+      <div class="footer-container">
+        <div class="footerwrap_row">
+          <div class="col-md-8"> <span class="copyright">Copyright &copy; 2023. Designed by ANJ</a></span> </div>
+          <div class="col-md-4"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app3.js"></script>
+</body>
+
+</html>
